@@ -4,7 +4,7 @@
 
 Unofficial Python wrapper for the **public** [devRant](https://www.devrant.io/) API.
 
-![devRant](https://raw.githubusercontent.com/danillouz/devrant/master/img/devrant.png "devRant")
+![devRant](https://raw.githubusercontent.com/danillouz/devrant/master/devrant.png "devRant")
 
 ## Requirements
 `requests`
@@ -29,18 +29,22 @@ Import the library by running:
 After requiring the module, the following methods can be
 used:
 
-| METHOD | ARGUMENTS | DESCRIPTION |
-| --- | --- | --- | --- |
-| [rant](#rantid) | Yes | Retrieve a single rant from devRant. Use this method to retrieve a rant with its full text and comments. The retrieved rant is a [Full Rant Object](#rant-object-full). |
-| [rants](#rantsoptions) | Optional  | Retrieve rants from devRant. The retrieved rants are [Simple Rant Objects](#rant-object-simple). |
-| [search](#searchterm) | Yes |  Retrieve rants from devRant that match a specific search term. The retrieved rants are [Simple Rant Objects](#rant-object-simple). |
-| [profile](#profileusername) | Yes  | Retrieve the profile of a devRant user by username. The retrieved profile is a [Profile Object](#profile-object). |
-
 ### devrant.get_rant(id)
 Retrieve a single rant from devRant. Use this method to retrieve a rant
 with its full text and comments by passing the rant id. For example `43511`.
 
 The method returns a [Full Rant Object](#rant-object-full).
+
+``python
+
+from pydevrant import devrant
+
+rants = devrant.get_rants()
+rant = devrant.get_rant('43511')
+user = devrant.get_user('dfox')
+user_profile = devrant.get_user_profile(user['user_id'])
+
+```
 
 
 ### devrant.get_rants(options)
@@ -220,15 +224,4 @@ The retrieved profile is a [Profile Object](#profile-object).
     }
   }
 }
-```
-####
-```python
-
-from pydevrant import devrant
-
-rants = devrant.get_rants()
-rant = devrant.get_rant('43511')
-user = devrant.get_user('dfox')
-user_profile = devrant.get_user_profile(user['user_id'])
-
 ```
