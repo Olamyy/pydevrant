@@ -35,7 +35,7 @@ with its full text and comments by passing the rant id. For example `43511`.
 
 The method returns a [Full Rant Object](#rant-object-full).
 
-``python
+```python
 
 from pydevrant import devrant
 
