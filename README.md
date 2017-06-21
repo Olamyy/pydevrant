@@ -4,7 +4,7 @@
 
 Unofficial Python wrapper for the **public** [devRant](https://www.devrant.io/) API.
 
-![devRant](https://raw.githubusercontent.com/danillouz/devrant/master/devrant.png "devRant")
+![devRant](https://raw.githubusercontent.com/olamyy/pydevrant/master/devrant.png "devRant")
 
 ## Requirements
 `requests`
